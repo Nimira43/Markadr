@@ -1,5 +1,9 @@
+import { APP_NAME } from "@/lib/constants"
+
 const Footer = () => {
-  return (  );
+  return ( 
+
+   )
 }
  
-export default Footer;
+export default Footer

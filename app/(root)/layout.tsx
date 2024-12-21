@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -7,7 +5,6 @@ export default function RootLayout({
 }>) {
   return (
     <div className='flex h-screen flex-col'>
-      ROOT
       <main className="flex-1 wrapper">
         { children }
       </main>

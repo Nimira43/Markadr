@@ -9,7 +9,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Markaðr",
-  description: "E-commerce website using Next JS 15, Ty[eScript, Tailwind, Shadcn, Prisma and PostgreSQL]",
+  description: "E-commerce website using Next JS 15, TypeScript, Tailwind, Shadcn, Prisma and PostgreSQL]",
 }
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${poppins.className} antialiased`}>
         {children}
       </body>
     </html>

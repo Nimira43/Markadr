@@ -1,6 +1,6 @@
-import type { Metadata } from "next"
+import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google' 
-import "./globals.css"
+import './globals.css'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -8,8 +8,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Markaðr",
-  description: "E-commerce website using Next JS 15, TypeScript, Tailwind, Shadcn, Prisma and PostgreSQL]",
+  title: 'Markaðr',
+  description: 'E-commerce website using Next JS 15, TypeScript, Tailwind, Shadcn, Prisma and PostgreSQL]',
 }
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={`${poppins.className} antialiased`}>
         {children}
       </body>

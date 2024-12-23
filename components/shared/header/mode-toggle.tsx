@@ -7,6 +7,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuContent, 
+  DropdownMenuCheckboxItem
 } from '@/components/ui/dropdown-menu'
 import { useTheme } from 'next-themes'
 import { FiSun, FiMoon } from 'react-icons/fi'
@@ -28,7 +29,7 @@ const ModeToggle = () => {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant='outline'>
+          <Button variant='outline' className='focus-visible:ring-0 focus-visible:ring-offset-0'>
             { 
               theme === 'system' ? (
                 <LuSunMoon />
@@ -40,6 +41,16 @@ const ModeToggle = () => {
             }
           </Button>
         </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+          <DropdownMenuSeparator />
+          <DropdownMenuCheckboxItem 
+            checked={ theme === 'system' } 
+            onClick={ () => setTheme('system')}
+          >
+            System
+          </DropdownMenuCheckboxItem>
+        </DropdownMenuContent>
       </DropdownMenu>
     </>
    )

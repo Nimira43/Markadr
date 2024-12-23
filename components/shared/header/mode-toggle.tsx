@@ -1,7 +1,21 @@
+'use Client'
+import { 
+  DropdownMenu, 
+  DropdownMenuTrigger,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuContent, 
+} from '@/components/ui/dropdown-menu'
+import { useTheme } from 'next-themes'
+
 const ModeToggle = () => {
+  const { theme, setTheme } = useTheme()
+
   return ( 
     <>
-      Toggle
+      <DropdownMenu>
+        <DropdownMenuTrigger></DropdownMenuTrigger>
+      </DropdownMenu>
     </>
    )
 }

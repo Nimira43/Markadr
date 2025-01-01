@@ -3,9 +3,9 @@ import loader from '@/assets/loader.gif'
 
 const LoadingPage = () => {
   return ( 
-    <>
-      Loading
-    </>
+    <div>
+      <Image src={loader} height={150} width={150} alt='Loading...' />     
+    </div>
    )
 }
  

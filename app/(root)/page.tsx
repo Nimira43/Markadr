@@ -1,8 +1,11 @@
+import ProductList from '@/components/shared/product/product-list'
+import sampleData from '@/sample-data'
+
 const Homepage = () => {
   
   return ( 
     <>
-      <h1>Home Page</h1>
+      <ProductList data={sampleData} title='Latest Items' />
     </>
    )
 }

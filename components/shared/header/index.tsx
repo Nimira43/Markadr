@@ -9,8 +9,8 @@ import ModeToggle from './mode-toggle'
 const Header = () => {
   return ( 
     <header className='w-full border-b'>
-      <div className="wrapper flex-between">
-        <div className="flex-start">
+      <div className='wrapper flex-between'>
+        <div className='flex-start'>
           <Link href='/' className='flex-start'>
             <Image 
               src='/images/logo1.png' 
@@ -24,7 +24,7 @@ const Header = () => {
             </span>
           </Link>
         </div>
-        <div className="space-x-2">
+        <div className='space-x-2'>
           <ModeToggle />
           <Button asChild variant='outline'>
             <Link href='/cart'>

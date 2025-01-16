@@ -5,7 +5,7 @@ const Homepage = () => {
   
   return ( 
     <>
-      <ProductList data={sampleData} title='Latest Items' />
+      <ProductList data={sampleData.products} title='Latest Items' />
     </>
    )
 }

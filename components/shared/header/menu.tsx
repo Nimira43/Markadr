@@ -1,8 +1,10 @@
 import { Button } from '@/components/ui/button'
 import ModeToggle from './mode-toggle'
-import { Link } from 'lucide-react'
+import Link from 'next/link'
 import { MdOutlineShoppingCart } from 'react-icons/md'
 import { RiUser3Line } from 'react-icons/ri'
+import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
+import { IoEllipsisVerticalCircleOutline } from 'react-icons/io5'
 
 const Menu = () => {
   return ( 
@@ -19,6 +21,23 @@ const Menu = () => {
             <RiUser3Line /> Sign In
           </Link>
         </Button>
+      </nav>
+      <nav className='md:hidden'>
+        <Sheet>
+          <SheetTrigger className='align-middle'>
+            <IoEllipsisVerticalCircleOutline />
+          </SheetTrigger>
+          <SheetContent className='flex flex-col items-start' >
+            <SheetTitle>Menu</SheetTitle>
+            <ModeToggle />
+            <Button asChild>
+              <Link href=''>
+                <MdOutlineShoppingCart /> Cart
+              </Link>
+            </Button>
+            <SheetDescription></SheetDescription>
+          </SheetContent>
+        </Sheet>
       </nav>
     </div>
    )

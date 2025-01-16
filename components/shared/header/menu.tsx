@@ -30,9 +30,14 @@ const Menu = () => {
           <SheetContent className='flex flex-col items-start' >
             <SheetTitle>Menu</SheetTitle>
             <ModeToggle />
-            <Button asChild>
+            <Button asChild variant='outline'>
               <Link href='/cart'>
                 <MdOutlineShoppingCart /> Cart
+              </Link>
+            </Button>
+            <Button asChild>
+              <Link href='/sign-in'>
+                <RiUser3Line /> Sign In
               </Link>
             </Button>
             <SheetDescription></SheetDescription>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { MdOutlineShoppingCart } from 'react-icons/md'
 import { RiUser3Line } from 'react-icons/ri'
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
-import { IoEllipsisVerticalCircleOutline } from 'react-icons/io5'
+import { IoEllipsisVerticalOutline } from 'react-icons/io5'
 
 const Menu = () => {
   return ( 
@@ -25,13 +25,13 @@ const Menu = () => {
       <nav className='md:hidden'>
         <Sheet>
           <SheetTrigger className='align-middle'>
-            <IoEllipsisVerticalCircleOutline />
+            <IoEllipsisVerticalOutline />
           </SheetTrigger>
           <SheetContent className='flex flex-col items-start' >
             <SheetTitle>Menu</SheetTitle>
             <ModeToggle />
             <Button asChild>
-              <Link href=''>
+              <Link href='/cart'>
                 <MdOutlineShoppingCart /> Cart
               </Link>
             </Button>

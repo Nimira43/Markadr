@@ -10,7 +10,9 @@ const ProductPrice = ({value, className}: {value: number; className?: string}) =
         cn('text-2xl', className)
       }
     >
-      <span></span>
+      <span className='text-xs align-super'>£</span>
+      {intValue}
+      <span className='text-xs align-super'>.{ floatValue }</span>
     </p>
    )
 }

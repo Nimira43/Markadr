@@ -15,8 +15,8 @@ const NotFoundPage = () => {
         priority={true} 
       />
       <div className='p-6 w-1/3 rounded-lg shadow-md text-center'>
-        <h1 className='text-3xl mb-4 text-[#ff4500]'>Page Not Found</h1>
-        <p className='text-[#ff4500]'>We could not find the page you were looking for</p>
+        <h1 className='text-3xl mb-4 text-main'>Page Not Found</h1>
+        <p className='text-main'>We could not find the page you were looking for</p>
         <Button
           className='mt-4 ml-2 uppercase' 
           onClick={() => {

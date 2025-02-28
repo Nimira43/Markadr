@@ -1,4 +1,5 @@
 import ProductPrice from '@/components/shared/product/product-price'
+import { Card, CardContent } from '@/components/ui/card'
 import { getProductBySlug } from '@/lib/actions/product.actions'
 import { notFound } from 'next/navigation'
 
@@ -36,6 +37,22 @@ const ProductDetailsPage = async (props: {
               <p className='font-medium'>Description</p>
               <p>{product.description}</p>
             </div>
+          </div>
+          <div>
+            <Card>
+              <CardContent className='p-4'>
+                <div className='mb-2 flex justify-between '>
+                  <div>Price</div>
+                  <div>
+                    <ProductPrice value={Number(product.price)}/>
+                  </div>
+                </div>
+                <div className='mb-2 flex justify-between '>
+                  <div>Status</div>
+                  {product.stock > 0 ? () : ()}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
 

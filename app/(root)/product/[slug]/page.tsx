@@ -1,3 +1,4 @@
+import ProductPrice from '@/components/shared/product/product-price'
 import { getProductBySlug } from '@/lib/actions/product.actions'
 import { notFound } from 'next/navigation'
 
@@ -25,7 +26,10 @@ const ProductDetailsPage = async (props: {
               <div 
                 className='flex flex-col sm:flex-row sm:items-center gap-3'
               > 
-        
+                <ProductPrice
+                  value={Number(product.price)}
+                  className='w-24 rounded-full bg-main-light text-main px-5 py-2'
+                />
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ const ProductDetailsPage = async (props: {
 }) => {
   const { slug } = await props.params
 
-  return <>Details</>
+  return <>{slug}</>
 }
  
 export default ProductDetailsPage

@@ -1,4 +1,5 @@
 import ProductPrice from '@/components/shared/product/product-price'
+import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { getProductBySlug } from '@/lib/actions/product.actions'
 import { notFound } from 'next/navigation'
@@ -49,8 +50,13 @@ const ProductDetailsPage = async (props: {
                 </div>
                 <div className='mb-2 flex justify-between '>
                   <div>Status</div>
-                  {product.stock > 0 ? () : ()}
+                  {product.stock > 0 ? (
+                    <Badge variant='outline'>In Stock</Badge>
+                  ) : (
+                    <Badge variant='default'>Out of Stock</Badge>          
+                  )}
                 </div>
+                
               </CardContent>
             </Card>
           </div>

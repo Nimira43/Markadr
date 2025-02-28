@@ -8,7 +8,23 @@ const ProductDetailsPage = async (props: {
   const product = await getProductBySlug(slug)
   if (!product) notFound()
 
-  return <>{product.name}</>
+  return (
+    <>
+      <section>
+        <div className='grid grid-cols-1 md:grid-cols-5'>
+          <div className='col-span-2'>
+            Images
+          </div>
+          <div className='col-span-2 p-5'>
+            <div className='flex flex-col gap-6'>
+              
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </>
+  )
 }
  
 export default ProductDetailsPage

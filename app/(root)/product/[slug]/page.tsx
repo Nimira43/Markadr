@@ -1,5 +1,6 @@
 import ProductPrice from '@/components/shared/product/product-price'
 import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { getProductBySlug } from '@/lib/actions/product.actions'
 import { notFound } from 'next/navigation'
@@ -56,7 +57,11 @@ const ProductDetailsPage = async (props: {
                     <Badge variant='default'>Out of Stock</Badge>          
                   )}
                 </div>
-                
+                {product.stock > 0 && (
+                  <div className='flex-center'>
+                    <Button className='w-full'>Add to Cart</Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>

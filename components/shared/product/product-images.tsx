@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-// import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils'
 
 const ProductImages = ({ images }: { images: string[] }) => {
   const [current, setCurrent] = useState(0)
@@ -21,7 +21,10 @@ const ProductImages = ({ images }: { images: string[] }) => {
         {images.map((image, index) => (
           <div
             key={image}
-            onClick={ () => setCurrent(index)}
+            onClick={() => setCurrent(index)}
+            className={
+              cn('border mr-2 cursor-pointer hover:border-dark', current === index && 'border-main')
+            }
           >
             <Image 
               src={image}

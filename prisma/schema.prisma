@@ -38,24 +38,23 @@ model User {
   paymentMethod String?        
   createdAt     DateTime  @default(now()) @db.Timestamp(6)
   updatedAt     DateTime  @updatedAt
+  account       Account[]
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String  @map("user_id")
+  userId             String  @db.Uuid
   type               String
   provider           String
-  providerAccountId  String  @map("provider_account_id")
-  refresh_token      String? @db.Text
-  access_token       String? @db.Text
+  providerAccountId  String
+  refresh_token      String?
+  access_token       String? 
   expires_at         Int?
   token_type         String?
   scope              String?
-  id_token           String? @db.Text
+  id_token           String?
   session_state      String?
  
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
  
-  @@unique([provider, providerAccountId])
-  @@map("accounts")
+  @@id([provider, providerAccountId])
 }

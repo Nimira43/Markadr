@@ -1,4 +1,11 @@
 const sampleData = {
+  users: [
+    {
+      name: 'Lenonardo',
+      email: 'admin@markadr.com',
+      password: 
+    }
+  ],
   products: [
     {
       name: 'Polo Sporting Stretch Shirt',

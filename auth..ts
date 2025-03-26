@@ -2,4 +2,4 @@ import NextAuth from 'next-auth'
 
 export const config = {}
 
-NextAuth(config)
+export const { handlers, auth, signIn, signOut } = NextAuth(config)

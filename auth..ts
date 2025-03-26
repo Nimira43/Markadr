@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth'
 import { PrismaAdapter } from '@auth/prisma-adapter'
+import { prisma } from './db/prisma'
 
 export const config = {
   pages: {
@@ -9,7 +10,7 @@ export const config = {
   session: {
     strategy: 'jwt',
     maxAge: 30 * 24 * 60 * 60,
-    
+
   }
 }
 

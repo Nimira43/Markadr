@@ -27,7 +27,7 @@ export const config = {
         }
       })
       if (user && user.password) {
-        const isMatch = compareSync
+        const isMatch = compareSync(credentials.password as string, user.password)
       }
     }
   })]

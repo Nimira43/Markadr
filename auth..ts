@@ -14,7 +14,10 @@ export const config = {
   },
   adapter: PrismaAdapter(prisma),
   providers: [CredentialsProvider({
-    
+    credentials: {
+      email: { type: 'email'},
+      password: { type: 'password'}
+    }
   })]
 }
 

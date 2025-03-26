@@ -17,6 +17,14 @@ export const config = {
     credentials: {
       email: { type: 'email'},
       password: { type: 'password'}
+    },
+    async authorize(credentials) {
+      if (credentials == null) return null
+      const user = await prisma.user.findFirst({
+        where: {
+          email: credentials.email as string
+        }
+      })
     }
   })]
 }

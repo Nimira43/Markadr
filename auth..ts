@@ -43,7 +43,11 @@ export const config = {
       }
     })
   ],
-  callbacks: {}
+  callbacks: {
+    async session({ session, user, trigger, token }: any) {
+      return session
+    }
+  }
 }
 
 export const { handlers, auth, signIn, signOut } = NextAuth(config)

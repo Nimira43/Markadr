@@ -1,4 +1,4 @@
-import { Card, CardHeader } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { APP_NAME } from '@/lib/constants';
 import { Metadata } from 'next'
 import Image from 'next/image';
@@ -22,7 +22,14 @@ const SignInPage = () => {
               priority={true}
             />
           </Link>
+          <CardTitle className='text-center'>Markaðr</CardTitle>
+          <CardDescription className='text-center'>
+            Sign into your account
+          </CardDescription>
         </CardHeader>
+        <CardContent className='space-y-4'>
+          Form
+        </CardContent>
       </Card>
     </div>
    );

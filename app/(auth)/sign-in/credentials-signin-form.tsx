@@ -18,6 +18,17 @@ const CredentialsSignInForm = () => {
           defaultValue={signInDefaultValues.email}
         />
       </div>
+      <div className='space-y-6'>
+        <Label htmlFor='password'>Password</Label>
+        <Input
+          id='password'  
+          name='password'  
+          type='password'
+          required
+          autoComplete='password'  
+          defaultValue={signInDefaultValues.password}
+        />
+      </div>
     </form>
   );
 }

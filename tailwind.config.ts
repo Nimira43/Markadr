@@ -12,8 +12,12 @@ export default {
 			colors: {
 				'main': '#ff4500',
 				'main-light': '#fddcc0',
+				'support': '008080',
 				'light': '#fffcfa',
 				'dark': '#111',
+				'grey-dark': '#333',
+				'grey-medium': '#999',
+				'grey-light-medium': '#ccc',
 				'grey-light': '#eee',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

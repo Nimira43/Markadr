@@ -1,7 +1,8 @@
 'use client'
 
-import { Input } from '@/components/ui/input';
+import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { signInDefaultValues } from '@/lib/constants'
 
 const CredentialsSignInForm = () => {
   return (  
@@ -14,6 +15,7 @@ const CredentialsSignInForm = () => {
           type='email'
           required
           autoComplete='email'  
+          defaultValue={signInDefaultValues.email}
         />
       </div>
     </form>

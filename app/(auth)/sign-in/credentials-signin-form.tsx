@@ -1,5 +1,6 @@
 'use client'
 
+import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label'
 
 const CredentialsSignInForm = () => {
@@ -7,6 +8,13 @@ const CredentialsSignInForm = () => {
     <form >
       <div className='space-y-6'>
         <Label htmlFor='email'>Email</Label>
+        <Input
+          id='email'  
+          name='email'  
+          type='email'
+          required
+          autoComplete='email'  
+        />
       </div>
     </form>
   );

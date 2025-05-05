@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { signInDefaultValues } from '@/lib/constants'
 import Link from 'next/link'
+import { signInWithCredentials } from '@/lib/actions/user.actions'
 
 const CredentialsSignInForm = () => {
   return (  

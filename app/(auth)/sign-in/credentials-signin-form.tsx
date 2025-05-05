@@ -16,7 +16,7 @@ const CredentialsSignInForm = () => {
   })
 
   return (  
-    <form >
+    <form action={action}>
       <div className='space-y-6'>
         
         <div>
@@ -51,6 +51,11 @@ const CredentialsSignInForm = () => {
             Sign Up
           </Button>
         </div>
+        {data && !data.success && (
+          <div className='text-center text-main'>
+            {data.message}
+          </div>
+        )}
         <div className="text-sm text-center text-muted-foreground">
         Dont&apos;t have an account? {' '}
           <Link

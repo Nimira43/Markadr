@@ -10,6 +10,11 @@ import { useFormStatus } from 'react-dom'
 import { useActionState } from 'react'
 
 const CredentialsSignInForm = () => {
+  const [data, action] = useActionState(signInWithCredentials, {
+    success: false,
+    message: ''
+  })
+
   return (  
     <form >
       <div className='space-y-6'>

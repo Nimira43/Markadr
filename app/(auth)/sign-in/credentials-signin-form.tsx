@@ -57,12 +57,7 @@ const CredentialsSignInForm = () => {
         </div>
 
         <div>
-          <Button
-            className='w-full uppercase'
-            variant='default'
-          >
-            Sign Up
-          </Button>
+          <SignInButton />
         </div>
         {data && !data.success && (
           <div className='text-center text-main'>

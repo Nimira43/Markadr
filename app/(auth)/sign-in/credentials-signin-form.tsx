@@ -76,7 +76,7 @@ const CredentialsSignInForm = () => {
         </div>
       </div>     
     </form>
-  );
+  )
 }
  
-export default CredentialsSignInForm;
+export default CredentialsSignInForm

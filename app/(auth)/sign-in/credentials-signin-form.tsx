@@ -8,6 +8,8 @@ import Link from 'next/link'
 import { signInWithCredentials } from '@/lib/actions/user.actions'
 import { useFormStatus } from 'react-dom'
 import { useActionState } from 'react'
+import { useSearchParams } from 'next/navigation'
+
 
 const CredentialsSignInForm = () => {
   const [data, action] = useActionState(signInWithCredentials, {

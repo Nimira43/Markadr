@@ -21,9 +21,20 @@ const UserButton = async () => {
   const firstInitial = session.user?.name?.charAt(0).toUpperCase() ?? ''
 
   return ( 
-    <>
-      
-    </>
+    <div className='flex gap-2, items-center'>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <div className='flex items-center'>
+            <Button
+              variant='ghost'
+              className='relative w-8 h-8 rounded-full ml-2 flex items-center justify-center bg-grey-light text-main hover:bg-main hover:text-light'
+            >
+              {firstInitial}  
+            </Button>
+          </div>
+        </DropdownMenuTrigger>
+      </DropdownMenu>
+    </div>
    )
 }
  

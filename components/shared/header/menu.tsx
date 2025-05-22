@@ -18,11 +18,6 @@ const Menu = () => {
           </Link>
         </Button>
         <UserButton />
-        {/* <Button asChild>
-          <Link href='/sign-in'>
-            <RiUser3Line /> Sign In
-          </Link>
-        </Button> */}
       </nav>
       <nav className='md:hidden'>
         <Sheet>
@@ -37,11 +32,6 @@ const Menu = () => {
                 <MdOutlineShoppingCart /> Cart
               </Link>
             </Button>
-            {/* <Button asChild>
-              <Link href='/sign-in'>
-                <RiUser3Line /> Sign In
-              </Link>
-            </Button> */}
             <UserButton />
             <SheetDescription></SheetDescription>
           </SheetContent>

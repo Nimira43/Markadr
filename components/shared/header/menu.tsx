@@ -27,7 +27,11 @@ const Menu = () => {
           <SheetContent className='flex flex-col items-start' >
             <SheetTitle>Menu</SheetTitle>
             <ModeToggle />
-            <Button asChild variant='outline'>
+            <Button
+              asChild
+              className='uppercase'
+              variant='outline'
+            >
               <Link href='/cart'>
                 <MdOutlineShoppingCart /> Cart
               </Link>

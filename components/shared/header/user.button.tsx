@@ -10,9 +10,12 @@ const UserButton = async () => {
 
   if (!session) {
     return (
-      <Button asChild>
+      <Button
+        asChild
+        className='uppercase'
+      >
         <Link href='/sign-in'>
-          <RiUser3Line /> Sign In
+          <RiUser3Line/> Sign In
         </Link>
       </Button>
     )
@@ -48,6 +51,17 @@ const UserButton = async () => {
               </div>
             </div>
           </DropdownMenuLabel>
+          <DropdownMenuItem className='p-0 mb-1'>
+            <form action={ signOutUser } className='w-full'>
+              <Button
+                className='w-full py-4 px-2 h-4 justify-start'
+                variant='ghost'
+              >
+                Sign Out
+              </Button>
+
+            </form>
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

@@ -12,7 +12,11 @@ const Menu = () => {
     <div className='flex justify-end gap-3'>
       <nav className='hidden md:flex w-full max-w-xs gap-1'>
         <ModeToggle />
-        <Button asChild variant='outline'>
+        <Button
+          asChild
+          className='uppercase'
+          variant='outline'
+        >
           <Link href='/cart'>
             <MdOutlineShoppingCart /> Cart
           </Link>

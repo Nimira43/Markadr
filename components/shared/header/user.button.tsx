@@ -18,11 +18,11 @@ const UserButton = async () => {
     )
   }
 
-  const firstInitial = session.user?.name?.charAt(0)
+  const firstInitial = session.user?.name?.charAt(0).toUpperCase() ?? ''
 
   return ( 
     <>
-      User
+      
     </>
    )
 }

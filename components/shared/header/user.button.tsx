@@ -43,6 +43,9 @@ const UserButton = async () => {
               <div className='text-sm font-medium leading-none'>
                 {session.user?.name}
               </div>
+              <div className='text-sm text-muted-foreground leading-none'>
+                {session.user?.email}
+              </div>
             </div>
           </DropdownMenuLabel>
         </DropdownMenuContent>

@@ -5,6 +5,7 @@ import { MdOutlineShoppingCart } from 'react-icons/md'
 import { RiUser3Line } from 'react-icons/ri'
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { IoEllipsisVerticalOutline } from 'react-icons/io5'
+import UserButton from './user.button'
 
 const Menu = () => {
   return ( 
@@ -16,11 +17,12 @@ const Menu = () => {
             <MdOutlineShoppingCart /> Cart
           </Link>
         </Button>
-        <Button asChild>
+        <UserButton />
+        {/* <Button asChild>
           <Link href='/sign-in'>
             <RiUser3Line /> Sign In
           </Link>
-        </Button>
+        </Button> */}
       </nav>
       <nav className='md:hidden'>
         <Sheet>
@@ -35,11 +37,12 @@ const Menu = () => {
                 <MdOutlineShoppingCart /> Cart
               </Link>
             </Button>
-            <Button asChild>
+            {/* <Button asChild>
               <Link href='/sign-in'>
                 <RiUser3Line /> Sign In
               </Link>
-            </Button>
+            </Button> */}
+            <UserButton />
             <SheetDescription></SheetDescription>
           </SheetContent>
         </Sheet>

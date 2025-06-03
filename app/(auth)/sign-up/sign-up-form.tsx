@@ -10,8 +10,7 @@ import { useFormStatus } from 'react-dom'
 import { useActionState } from 'react'
 import { useSearchParams } from 'next/navigation'
 
-
-const CredentialsSignInForm = () => {
+const SignUpForm = () => {
   const [data, action] = useActionState(signInWithCredentials, {
     success: false,
     message: ''
@@ -88,4 +87,4 @@ const CredentialsSignInForm = () => {
   )
 }
  
-export default CredentialsSignInForm
+export default SignUpForm

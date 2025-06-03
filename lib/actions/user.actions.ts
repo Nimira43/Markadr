@@ -37,14 +37,25 @@ export async function signUpUser(prevState: unknown, formData: FormData) {
       password: formData.get('password'),
       confirmPassword: formData.get('confirmPassword'),
     })
+
+    const plainPassword = user.password
     user.password = hashSync(user.password, 10)
+    
     await prisma.user.create({
       data: {
         name: user.name,
         email: user.email,
         password: user.password,
       }
-    })    
+    })
+
+    await signIn('credentials', {
+      email: user.email,
+      password: plainPassword
+    })
+
+    return { success: true, message: 'User registered successfully.'}
+    
   } catch (error) {
     
   }

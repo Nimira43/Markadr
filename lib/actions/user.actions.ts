@@ -30,5 +30,22 @@ export async function signOutUser() {
 }
 
 export async function signUpUser(prevState: unknown, formData: FormData) {
-
+  try {
+    const user = signUpFormSchema.parse({
+      name: formData.get('name'),
+      email: formData.get('email'),
+      password: formData.get('password'),
+      confirmPassword: formData.get('confirmPassword'),
+    })
+    user.password = hashSync(user.password, 10)
+    await prisma.user.create({
+      data: {
+        name: user.name,
+        email: user.email,
+        password: user.password,
+      }
+    })    
+  } catch (error) {
+    
+  }
 }

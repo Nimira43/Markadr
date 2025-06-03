@@ -28,3 +28,7 @@ export async function signInWithCredentials(
 export async function signOutUser() {
   await signOut()
 }
+
+export async function signUpUser(prevState: unknown, formData: FormData) {
+
+}

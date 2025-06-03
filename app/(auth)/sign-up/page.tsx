@@ -3,21 +3,19 @@ import { APP_NAME } from '@/lib/constants'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import CredentialsSignInForm from './credentials-signin-form'
 import { auth } from '@/auth'
 import { redirect } from 'next/navigation'
 
 export const metadata: Metadata = {
-  title: 'Sign In'
+  title: 'Sign Up'
 }
 
-const SignInPage = async (props: {
+const SignUpPage = async (props: {
   searchParams: Promise<{
     callbackUrl: string
   }>
 }) => {
   const { callbackUrl } = await props.searchParams
-  
   const session = await auth()
 
   if (session) {
@@ -39,15 +37,15 @@ const SignInPage = async (props: {
           </Link>
           <CardTitle className='text-center'>Markaðr</CardTitle>
           <CardDescription className='text-center'>
-            Sign into your account
+            Create your Account
           </CardDescription>
         </CardHeader>
         <CardContent className='space-y-4'>
-          <CredentialsSignInForm />
+          Sign Up Form
         </CardContent>
       </Card>
     </div>
    );
 }
  
-export default SignInPage;
+export default SignUpPage;

@@ -39,7 +39,7 @@ const SignInPage = async (props: {
           </Link>
           <CardTitle className='text-center'>Markaðr</CardTitle>
           <CardDescription className='text-center'>
-            Sign into your account
+            Sign into your Account
           </CardDescription>
         </CardHeader>
         <CardContent className='space-y-4'>

@@ -23,7 +23,8 @@ export function formatError(error: any) {
     const fieldErrors = Object.keys(error.errors).map((field) => error.errors[field].message)
     return fieldErrors.join('. ')
   } else if (error.name === 'PrismaClientKnownRequestError' && error.code === 'P2002') {
-
+    const field = error.meta?.target ? error.meta.target[0] : 'Field'
+    return `${field.charAt(0).toUppercase() + field.slice(1)} already exists.`
   } else {
 
   }

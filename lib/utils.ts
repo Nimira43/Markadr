@@ -16,3 +16,8 @@ export function formatNumberWithDecimal(num: number): string {
     :
     `${int}.00`
 }
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function formatError(error: any) {
+
+}

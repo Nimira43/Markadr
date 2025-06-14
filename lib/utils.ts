@@ -19,5 +19,11 @@ export function formatNumberWithDecimal(num: number): string {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function formatError(error: any) {
+  if (error.name === 'ZodError') {
 
+  } else if (error.name === 'PrismaClientKnownRequestError' && error.code === 'P2002') {
+
+  } else {
+    
+  }
 }

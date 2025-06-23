@@ -65,6 +65,7 @@ export const config = {
           })
         }
       }
+      return token
     }
   },
 } satisfies NextAuthConfig

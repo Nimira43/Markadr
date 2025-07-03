@@ -63,3 +63,7 @@ export const signUpFormSchema = z.object({
   message: 'Password do not match',
   path: ['confirmPassword'] 
 })
+
+export const cartItemSchema = z.object({
+  
+})

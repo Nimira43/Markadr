@@ -6,3 +6,5 @@ export type Product = z.infer<typeof insertProductSchema> & {
   rating: string
   createdAt: Date
 }
+
+export type Cart = z.infer<typeof insertCartSchema>

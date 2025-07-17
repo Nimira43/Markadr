@@ -80,3 +80,8 @@ model VerificationToken {
  
   @@id([identifier, token])
 }
+
+model Cart {
+  id      String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId  String?
+}

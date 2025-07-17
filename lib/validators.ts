@@ -83,3 +83,8 @@ export const cartItemSchema = z.object({
     .min(1, 'Image is required'),
   price: currency
 })
+
+export const insertCartSchema = z.object({
+  items: z
+    .array(cartItemSchema)
+})

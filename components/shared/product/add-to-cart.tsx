@@ -11,6 +11,8 @@ import { addItemToCart } from '@/lib/actions/cart.actions'
 const AddToCart = ({ item } : {
   item: CartItem 
 }) => {
+  const router = useRouter()
+  const { toast } = useToast() 
   const handleAddToCart = async () => {
 
   }

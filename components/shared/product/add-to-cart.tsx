@@ -10,7 +10,9 @@ import { ToastAction } from '@/components/ui/toast'
 const AddToCart = ({ item } : {
   item: CartItem 
 }) => {
-  
+  const handleAddToCart = async () => {
+    
+  }
 
   return ( 
     <Button

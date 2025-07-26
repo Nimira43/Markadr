@@ -10,10 +10,16 @@ import { ToastAction } from '@/components/ui/toast'
 const AddToCart = ({ item } : {
   item: CartItem 
 }) => {
+  
+
   return ( 
-    <>
+    <Button
+      className='w-full uppercase font-medium'
+      type='button'
+      onClick={handleAddToCart}
+    >
       Add To Cart
-    </>
+    </Button>
    )
 }
  

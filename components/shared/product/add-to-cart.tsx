@@ -2,9 +2,13 @@
 
 import { CartItem } from '@/types'
 
-const AddToCart = () => {
+const AddToCart = ({ item } : {
+  item: CartItem 
+}) => {
   return ( 
-    <div>Add To Cart</div>
+    <>
+      Add To Cart
+    </>
    )
 }
  

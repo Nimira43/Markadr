@@ -6,12 +6,13 @@ import { CartItem } from '@/types'
 import { FiPlus } from 'react-icons/fi'
 import { useToast } from '@/hooks/use-toast'
 import { ToastAction } from '@/components/ui/toast'
+import { addItemToCart } from '@/lib/actions/cart.actions'
 
 const AddToCart = ({ item } : {
   item: CartItem 
 }) => {
   const handleAddToCart = async () => {
-    
+
   }
 
   return ( 

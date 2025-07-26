@@ -23,6 +23,14 @@ const AddToCart = ({ item } : {
       })
       return
     }
+    toast({
+      description: `${item.name} added to Cart.`,
+      action: (
+        <ToastAction className=''>
+          
+        </ToastAction>
+      )
+    })
   }
 
   return ( 

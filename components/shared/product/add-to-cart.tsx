@@ -43,7 +43,7 @@ const AddToCart = ({ item } : {
       type='button'
       onClick={handleAddToCart}
     >
-      Add To Cart
+      <FiPlus /> Add To Cart
     </Button>
    )
 }

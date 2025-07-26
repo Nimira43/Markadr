@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
 import { CartItem } from '@/types'
+import { FiPlus } from 'react-icons/fi'
 
 const AddToCart = ({ item } : {
   item: CartItem 

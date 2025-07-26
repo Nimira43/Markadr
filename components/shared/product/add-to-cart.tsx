@@ -13,8 +13,16 @@ const AddToCart = ({ item } : {
 }) => {
   const router = useRouter()
   const { toast } = useToast() 
-  const handleAddToCart = async () => {
 
+  const handleAddToCart = async () => {
+    const res = await addItemToCart(item)
+    if (!res.success) {
+      toast({
+        variant: 'destructive',
+        description: 'res.message'
+      })
+      return
+    }
   }
 
   return ( 

@@ -70,6 +70,9 @@ export const config = {
         }
       }
       return token
+    },
+    authorized({ request, auth }: any) {
+
     }
   },
 } satisfies NextAuthConfig

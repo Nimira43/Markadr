@@ -82,8 +82,9 @@ export const config = {
           }
         })
 
-        
-  
+        response.cookies.set('sessionCartId', sessionCartId)
+
+        return response
       } else {
         return true
       }

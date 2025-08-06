@@ -72,7 +72,7 @@ export const config = {
       return token
     },
     authorized({ request, auth }: any) {
-
+      if (!request.cookies.get('sessionCartId')) {}
     }
   },
 } satisfies NextAuthConfig

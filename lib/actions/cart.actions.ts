@@ -6,6 +6,10 @@ import { formatError } from '../utils'
 
 export async function addItemToCart(data: CartItem) {
   try {
+    const sessionCartId = (await cookies()).get('sessionCartId')?.value
+
+
+
     return {
       success: true,
       message: 'Item added to Cart.'

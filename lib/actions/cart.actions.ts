@@ -8,6 +8,9 @@ export async function addItemToCart(data: CartItem) {
   try {
     const sessionCartId = (await cookies()).get('sessionCartId')?.value
 
+    console.log({
+      'Session Cart ID': sessionCartId
+    })
 
 
     return {

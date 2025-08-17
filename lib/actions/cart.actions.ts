@@ -3,14 +3,15 @@
 import { cookies } from 'next/headers'
 import { CartItem } from '@/types'
 import { formatError } from '../utils'
+import { auth } from '@/auth'
 
 export async function addItemToCart(data: CartItem) {
   try {
     const sessionCartId = (await cookies()).get('sessionCartId')?.value
 
-    console.log({
-      'Session Cart ID': sessionCartId
-    })
+    if (!sessionCartId) throw new Error('Cart session not found.')
+    
+    const session = await auth()
 
 
     return {

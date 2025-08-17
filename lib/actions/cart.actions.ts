@@ -2,8 +2,10 @@
 
 import { cookies } from 'next/headers'
 import { CartItem } from '@/types'
-import { formatError } from '../utils'
+import { convertToPlainObject, formatError } from '../utils'
 import { auth } from '@/auth'
+import { prisma } from '@/db/prisma'
+import { cartItemSchema } from '../validators'
 
 export async function addItemToCart(data: CartItem) {
   try {
@@ -14,9 +16,13 @@ export async function addItemToCart(data: CartItem) {
     const session = await auth()
     const userId = session?.user?.id ? (session.user.id as string) : undefined
 
+    const cart = await getMyCart()
+    const item = cartItemSchema.parse(data)
+
     console.log({
-      'Session Cart ID': sessionCartId,
-      'User ID': userId
+      'Session Cart Id': sessionCartId,
+      'User ID': userId,
+      'Item Requested': item,
     })
 
     return {
@@ -34,4 +40,19 @@ export async function addItemToCart(data: CartItem) {
 export async function getMyCart() {
   const session = await auth()
   const userId = session?.user?.id ? (session.user.id as string) : undefined
+
+  const cart = await prisma.cart.findFirst({
+    where: userId ? { userId: userId } : { sessionCartId: sessionCartId },
+  })
+
+  if (!cart) return undefined
+
+  return convertToPlainObject({
+    ...cart,
+    items: cart.item as CartItem[],
+    itemsPrice: cart.itemsPrice.toString(),
+    totalPrice: cart.totalPrice.toString(),
+    shippingPrice: cart.shippingPrice.toString(),
+    taxPrice: cart.taxPrice.toString(),
+  })
 }

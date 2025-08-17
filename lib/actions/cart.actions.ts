@@ -12,7 +12,12 @@ export async function addItemToCart(data: CartItem) {
     if (!sessionCartId) throw new Error('Cart session not found.')
     
     const session = await auth()
+    const userId = session?.user?.id ? (session.user.id as string) : undefined
 
+    console.log({
+      'Session Cart ID': sessionCartId,
+      'User ID': userId
+    })
 
     return {
       success: true,

@@ -31,4 +31,7 @@ export async function addItemToCart(data: CartItem) {
   }
 }
 
-export async function getMyCart() {}
+export async function getMyCart() {
+  const session = await auth()
+  const userId = session?.user?.id ? (session.user.id as string) : undefined
+}

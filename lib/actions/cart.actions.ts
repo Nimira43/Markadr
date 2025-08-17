@@ -19,10 +19,15 @@ export async function addItemToCart(data: CartItem) {
     const cart = await getMyCart()
     const item = cartItemSchema.parse(data)
 
+    const product = await prisma.product.findFirst({
+      where: { id: item.productId }
+    })
+
     console.log({
       'Session Cart Id': sessionCartId,
       'User ID': userId,
       'Item Requested': item,
+      'Product Found': product
     })
 
     return {

@@ -1,5 +1,6 @@
 'use server'
 
+import { cookies } from 'next/headers'
 import { CartItem } from '@/types'
 
 export async function addItemToCart(data: CartItem) {

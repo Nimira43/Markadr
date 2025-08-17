@@ -30,3 +30,5 @@ export async function addItemToCart(data: CartItem) {
     }
   }
 }
+
+export async function getMyCart() {}

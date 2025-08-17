@@ -43,14 +43,11 @@ export async function addItemToCart(data: CartItem) {
 }
 
 export async function getMyCart() {
+  const sessionCartId = (await cookies()).get('sessionCartId')?.value
+  if (!sessionCartId) throw new Error('Cart session not found.')
+
   const session = await auth()
   const userId = session?.user?.id ? (session.user.id as string) : undefined
-  
-  
-  // Do I need this  
-  const sessionCartId = (await cookies()).get('sessionCartId')?.value
-  // Watch the above line
-  
   
   const cart = await prisma.cart.findFirst({
     where: userId ? { userId: userId } : { sessionCartId: sessionCartId },
